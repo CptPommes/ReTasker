@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/taskList"
+    android:background="@color/mainBackground"
+    tools:context="com.hsharz.kevin.toschedule.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:titleTextAppearance="@style/MyTitleTextStyle"
+        android:elevation="4dp"
+        android:theme="@style/AppBaseTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <LinearLayout
+        android:id="@+id/layoutFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightBackground"
+        android:layout_margin="5dp"
+        android:gravity="right"
+        android:layout_below="@id/toolbar">
+        <TextView
+            android:id="@+id/tvFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter"
+            android:gravity="end"
+            android:textSize="30sp"
+            android:textColor="@color/fontColor"/>
+        <Spinner
+            android:id="@+id/spinnerFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+
+            android:spinnerMode="dropdown"
+
+            ></Spinner>
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/listOfTasks"
+        android:layout_width="match_parent"
+        android:layout_below="@id/layoutFilter"
+        android:layout_height="wrap_content"></ListView>
+
+
+
+
+</RelativeLayout>

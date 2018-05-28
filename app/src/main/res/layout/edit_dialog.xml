@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dip"
+
+    android:background="#5F5F5F">
+
+
+    <TextView
+        android:id="@+id/addTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/editTitle"/>
+    <EditText
+        android:id="@+id/nameTaskEdit"
+        android:background="#E1E1E1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="25sp"
+        android:hint="@string/nameTask"
+        android:layout_below="@id/addTitleText"/>
+
+    <Spinner
+        android:id="@+id/dropDownWeekday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_below="@id/nameTaskEdit"></Spinner>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingLeft="4.0dip"
+        android:paddingTop="5.0dip"
+        android:paddingRight="4.0dip"
+        android:paddingBottom="1.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dropDownWeekday">
+        <Button
+            android:id="@+id/addOkBtn"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/okBtn"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/addCancelBtn"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/cancelBtn"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>
